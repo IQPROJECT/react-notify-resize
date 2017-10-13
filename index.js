@@ -64,7 +64,7 @@ class Box extends Component {
 }
 
 const NotifiedBox = notifyResize(Box);
-
+global.React = React;
 class App extends Component {
   constructor(props) {
     super(props);
@@ -92,7 +92,9 @@ class App extends Component {
                 height: this.state.height + 20
               });
             }}
-          >More</button>
+          >
+            More
+          </button>
           <button
             onClick={() => {
               this.setState({
@@ -100,7 +102,9 @@ class App extends Component {
                 height: this.state.height - 20
               });
             }}
-          >Less</button>
+          >
+            Less
+          </button>
         </p>
 
         <div style={{ marginTop: 20 }}>
@@ -128,7 +132,6 @@ class App extends Component {
               with FIXED (px) size <br />
               inside a relative parent
             </div>
-
           </div>
         </div>
       </div>
